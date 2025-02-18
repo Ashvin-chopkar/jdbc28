@@ -200,4 +200,16 @@ public class StudentDao {
 		}catch(SQLException e) {e.printStackTrace();}
 		return list;
 	}
+	
+	public List<Student> findStudentByNameContains(String name){
+		List<Student> list = new ArrayList();
+		String sql = "select id,name,city,percentage from student where name like ?";
+		try (Connection con = MyDatabase.myConnection();
+				PreparedStatement pst = con.prepareStatement(sql);){
+			pst.setString(1, "%"+name+"%");
+			ResultSet rs = pst.executeQuery();
+			list = MyDatabase.studentRowMapper(rs);
+		}catch(SQLException e) {e.printStackTrace();}
+		return list;
+	}
 }

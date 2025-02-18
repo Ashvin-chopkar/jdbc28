@@ -177,6 +177,13 @@ public class App
     		for(Student s:list9)
     			System.out.println(s);
     		break;
+    		
+    	case 16:
+    		System.out.println("Enter any characters to find students");
+    		
+    		List<Student> list10 = sd.findStudentByNameContains(sc.nextLine());
+    		for(Student s:list10)
+    			System.out.println(s);
     	default:
     		System.out.println("invalid choice");
     		break;
