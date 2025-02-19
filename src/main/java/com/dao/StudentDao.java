@@ -212,4 +212,16 @@ public class StudentDao {
 		}catch(SQLException e) {e.printStackTrace();}
 		return list;
 	}
+	
+	public List<String> findAllNames() {
+		List<String> list = new ArrayList();
+		String sql = "select name from student";
+		try (Connection con = MyDatabase.myConnection();
+				PreparedStatement pst = con.prepareStatement(sql);
+				ResultSet rs =  pst.executeQuery();){
+			while(rs.next())
+				list.add(rs.getString("name"));
+		}catch(SQLException e) {e.printStackTrace();}
+		return list;
+	}
 }

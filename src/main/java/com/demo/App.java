@@ -184,6 +184,14 @@ public class App
     		List<Student> list10 = sd.findStudentByNameContains(sc.nextLine());
     		for(Student s:list10)
     			System.out.println(s);
+    		break;
+    		
+    	case 17:
+    		List<String> list11 = sd.findAllNames();
+    		for(String s:list11)
+    			System.out.println(s);
+    		break;
+    		
     	default:
     		System.out.println("invalid choice");
     		break;
