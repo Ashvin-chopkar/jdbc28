@@ -24,7 +24,7 @@ Key Features:
 Technologies Used:
 🔹 Java (Core & Advanced)
 🔹 JDBC API
-🔹 MySQL / PostgreSQL (or any DB used)
+🔹 MySQL
 🔹 SQL Queries
 
 This project deepened my understanding of database connectivity, query optimization, and efficient data handling in Java applications.
